@@ -1,4 +1,3 @@
-
 from source.address_book import AddressBook
 from source.record import Record
 
@@ -36,4 +35,3 @@ print(f"{john.name}: {found_phone}")  # Виведення: 5555555555
 print(book.data)
 # # Видалення запису Jane
 book.delete("Jane")
-

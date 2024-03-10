@@ -6,7 +6,9 @@ def similar(a, b):
     return SequenceMatcher(None, a, b).ratio()
 
 
-def closest_match(input_text: str, search_list: List[str], threshold=0.1) -> Union[str, None]:
+def closest_match(
+    input_text: str, search_list: List[str], threshold=0.1
+) -> Union[str, None]:
     """
     Calculates closest neigbour to the input token. If nothing is look alike - returns None.
 

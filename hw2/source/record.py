@@ -2,18 +2,22 @@ from source.fields import Name, Phone
 from typing import Union
 from source.exceptions import DuplicatedValueException
 
+
 class BaseRecord:
     def __str__(self):
         return f"Base acstract class for record"
-    
+
+
 class EmptyRecord(BaseRecord):
     """
-        EmptyRecord class.
-        Used for consistency when searching over AdressBook.
-        Returned if no matching results were found.
+    EmptyRecord class.
+    Used for consistency when searching over AdressBook.
+    Returned if no matching results were found.
     """
+
     def __str__(self):
         return f"Empty record."
+
 
 class Record(BaseRecord):
     def __init__(self, name: str):
@@ -22,7 +26,7 @@ class Record(BaseRecord):
 
     def __str__(self):
         return f"Contact name: {self._name.value}, phones: {'; '.join(p.value for p in self.phones)}"
-    
+
     @property
     def name(self):
         return self._name.value
@@ -38,7 +42,7 @@ class Record(BaseRecord):
         phone = Phone(phone)
         if phone in self.phones:
             return phone
-        
+
     def remove_phone(self, phone: str) -> bool:
         phone = Phone(phone)
         if phone in self.phones:
@@ -46,7 +50,6 @@ class Record(BaseRecord):
             return True
         return False
 
-        
     def edit_phone(self, current_phone: str, new_phone: str) -> bool:
         phone = Phone(current_phone)
         if phone in self.phones:
