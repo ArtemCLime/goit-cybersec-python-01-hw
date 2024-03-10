@@ -19,3 +19,8 @@ Usage
 cd hw1/
 python bot/bot.py
 ```
+
+## 2. hw 2:
+    -- bot/ - mini-assitant that runs simple commands. (Same as in HW1 as already with user input handling.)
+
+    -- main.py - runs a code with AdressBook object and related obejcts.
