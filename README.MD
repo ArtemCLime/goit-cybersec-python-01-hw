@@ -24,3 +24,11 @@ python bot/bot.py
     -- bot/ - mini-assitant that runs simple commands. (Same as in HW1 as already with user input handling.)
 
     -- main.py - runs a code with AdressBook object and related obejcts.
+
+
+## 3. hw 3:
+    -- bot.py - mini-assitant that runs simple commands. 
+    Use `help` to see available commands.
+
+    Can add/remove contacts, phones, birthdays, shows birthdays for next week.
+    Can save and load data to/from JSON.
